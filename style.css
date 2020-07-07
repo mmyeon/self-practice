@@ -4,11 +4,11 @@
   --purple-color: #7510f7;
   --black-color: #141c3a;
   /* size */
-
+  --logo-size: 20px;
   /* font size */
-  --large-font: 18px;
-  --medium-font: 16px;
-  --small-font: 12px;
+  --font-large: 18px;
+  --font-medium: 16px;
+  --font-small: 12px;
 }
 
 * {
