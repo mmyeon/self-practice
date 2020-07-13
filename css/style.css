@@ -20,3 +20,17 @@
 body {
   font-family: "poppins";
 }
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header .logo {
+  width: 20px;
+  height: 20px;
+}
+
+header .buttons {
+  display: flex;
+}
