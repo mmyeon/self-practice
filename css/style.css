@@ -17,20 +17,19 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "poppins";
-}
-
-header {
+/* 모바일 CSS */
+/* 기본 CSS */
+#wrap {
   display: flex;
-  justify-content: space-around;
+  flex-flow: column nowrap;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-header .logo {
-  width: 20px;
-  height: 20px;
-}
-
-header .buttons {
-  display: flex;
+/* PC CSS */
+@media all and (min-width: 960px) {
+  #wrap {
+    width: 90%;
+  }
 }
