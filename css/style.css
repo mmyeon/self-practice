@@ -164,6 +164,31 @@ nav .gnb {
   width: 95%;
 }
 
+/* 인트로듀스 CSS */
+.introduce_section {
+  display: block;
+  width: 100%;
+  background: var(--purple-color);
+  color: var(--white-color);
+  padding: 50px 10px 300px 10px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.introduce_section .greeting {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+.introduce_section .introduce {
+  font-size: 1.05rem;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
 /* PC CSS */
 @media all and (min-width: 960px) {
   #wrap {
