@@ -22,7 +22,7 @@
 #wrap {
   display: flex;
   flex-flow: column nowrap;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -38,16 +38,18 @@ header {
 }
 
 header .logo {
-  position: aboslute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 3.4rem;
-  cursor: point;
+  cursor: pointer;
+  margin-left: 6px;
 }
 
 #gnb_button {
-  margin-right: 10px;
-  cursor: point;
+  padding-right: 10px;
+  margin-right: 6px;
+  cursor: pointer;
 }
 
 .bar1,
@@ -55,21 +57,27 @@ header .logo {
 .bar3 {
   width: 16px;
   height: 1px;
-  background-color: var(--purple-color);
+  background-color: var(--black-color);
   margin-top: 4px;
   transition: 0.4s;
 }
 
-/* TODO:(질문)translate로 위치 변경하니까 중아에서 벗어남. 직접 말고 정렬할 수 있는 방법이 있는지!  */
-.change .bar1 {
+/* TODO:(질문)translate로 위치 변경하니까 중아에서 벗어남. 직접 말고 정렬할 수 있는 방법이 있는지!  -> 부모에 포지션 relative 먹이고 자식이 absolute
+하면 회전, 이동 여부와 상관없이 고정!*/
+
+.change {
+  background-color: var(--purple-color);
+}
+
+.change.bar1 {
   transform: rotate(-45deg) translate(-2px, 2px);
 }
 
-.change .bar2 {
+.change.bar2 {
   opacity: 0%;
 }
 
-.change .bar3 {
+.change.bar3 {
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
@@ -78,25 +86,23 @@ nav {
 }
 
 nav .gnb {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   height: 150px;
   margin: 0 auto;
-  /* TODO:하단에 그림자영역 만들기 */
-  box-shadow: 1px 0px 1px #de1dde;
-  /* border-bottom: 1px solid black; */
+  box-shadow: 0px 12px 22px -20px #cbcbda;
+  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
 }
 
 .gnb li {
   margin: 0.7rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2rem;
 }
 
 .mentorship {
-  /* TODO:폰트 더 얇게 설정 */
-  font-weight: 300;
   color: var(--black-color);
   cursor: pointer;
 }
@@ -109,9 +115,10 @@ nav .gnb {
   color: var(--purple-color);
   border-radius: 2.4rem;
   border: 2px solid var(--purple-color);
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1.2rem;
   transition: 0.4s;
   cursor: pointer;
+  font-weight: 400;
 }
 
 .say_hello:hover {
@@ -135,19 +142,22 @@ nav .gnb {
 }
 
 .hero_text {
+  /* TODO:span에 패딩을 먹이면 왜 글자 정렬이 깨질까? -> display속성이 inline이어서 깨지니까 inline-block으로 변경*/
   text-align: center;
   line-height: 2.2rem;
-  letter-spacing: 0.02rem;
+  letter-spacing: -0.01rem;
   margin-bottom: 50px;
+  padding: 0 25px;
 }
 
 .hero_text .title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 
 .hero_text .desc {
-  font-size: 1.1rem;
+  font-size: 1.28rem;
 }
 
 .img_container {
@@ -156,17 +166,24 @@ nav .gnb {
   align-items: center;
 }
 .img_container .avartar {
-  width: 23%;
+  width: 36%;
   margin-bottom: 80px;
 }
 
 .img_container .computer {
-  width: 95%;
+  width: 90%;
 }
 
 /* 인트로듀스 CSS */
+
 .introduce_section {
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduce {
   width: 100%;
   background: var(--purple-color);
   color: var(--white-color);
@@ -175,18 +192,41 @@ nav .gnb {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* text-align: center; */
+  position: relative;
 }
 
-.introduce_section .greeting {
+.introduce .greeting {
   font-size: 1.4rem;
   margin: 20px 0;
 }
 
-.introduce_section .introduce {
-  font-size: 1.05rem;
+.introduce .about_me {
+  font-size: 1.28rem;
   letter-spacing: 0.05rem;
   text-align: center;
+  padding: 0 20px;
+}
+.jobs_description {
+  width: 90%;
+  position: absolute;
+  top: 66%;
+  background: white;
+  border-radius: 13px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(203, 203, 218, 0.38);
+}
+
+.jobs_description section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
+}
+
+.job_description section:last-child {
+  border: 0px;
 }
 
 /* PC CSS */
