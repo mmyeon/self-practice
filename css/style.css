@@ -19,12 +19,54 @@
 
 /* 모바일 CSS */
 /* 기본 CSS */
+
+body {
+  height: 100%;
+  /* 스크롤바 감추기 */
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+/* 스크롤바 감추기 */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* -webkit-appearance: none;
+
+body::-webkit-scrollbar {
+  dispaly
+  width: 0 !important;
+} */
+
 #wrap {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+.scroll_bar_wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-left: 1px solid rgba(203, 203, 218, 0.38);
+  background: var(--white-color);
+  height: 100%;
+  width: 8px;
+  z-index: 100;
+}
+
+.scroll_bar {
+  width: 100%;
+  height: 5%;
+  background: var(--black-color);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 110;
 }
 
 header {
@@ -48,7 +90,7 @@ header .logo {
 
 #gnb_button {
   padding-right: 10px;
-  margin-right: 6px;
+  margin-right: 16px;
   cursor: pointer;
 }
 
@@ -87,10 +129,10 @@ nav {
 
 nav .gnb {
   display: none;
-  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  height: 150px;
+  padding-top: 15px;
+  padding-bottom: 35px;
   margin: 0 auto;
   box-shadow: 0px 12px 22px -20px #cbcbda;
   border-bottom: 1px solid rgba(203, 203, 218, 0.38);
@@ -98,8 +140,8 @@ nav .gnb {
 
 .gnb li {
   margin: 0.7rem;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
 }
 
 .mentorship {
@@ -144,9 +186,8 @@ nav .gnb {
 .hero_text {
   /* TODO:span에 패딩을 먹이면 왜 글자 정렬이 깨질까? -> display속성이 inline이어서 깨지니까 inline-block으로 변경*/
   text-align: center;
-  line-height: 2.2rem;
   letter-spacing: -0.01rem;
-  margin-bottom: 50px;
+  margin-bottom: 66px;
   padding: 0 25px;
 }
 
@@ -154,10 +195,12 @@ nav .gnb {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 900;
+  line-height: 2.2rem;
 }
 
 .hero_text .desc {
   font-size: 1.28rem;
+  line-height: 1.8rem;
 }
 
 .img_container {
@@ -166,7 +209,7 @@ nav .gnb {
   align-items: center;
 }
 .img_container .avartar {
-  width: 36%;
+  width: 47%;
   margin-bottom: 80px;
 }
 
@@ -196,18 +239,19 @@ nav .gnb {
 }
 
 .introduce .greeting {
+  text-align: center;
   font-size: 1.4rem;
-  margin: 20px 0;
+  margin: 30px 30px;
 }
 
 .introduce .about_me {
-  font-size: 1.28rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05rem;
   text-align: center;
   padding: 0 20px;
 }
 .jobs_description {
-  width: 90%;
+  width: 87%;
   position: absolute;
   top: 66%;
   background: white;
@@ -229,9 +273,19 @@ nav .gnb {
   border: 0px;
 }
 
+/* Tablet CSS */
+@media all and (min-width: 768px) {
+  .scroll_bar {
+    height: 12%;
+  }
+}
 /* PC CSS */
 @media all and (min-width: 960px) {
   #wrap {
     width: 90%;
+  }
+
+  .scroll_bar {
+    height: 12%;
   }
 }
