@@ -332,7 +332,7 @@ nav .gnb {
 .recent_work_section {
   position: relative;
   width: 100%;
-  top: -120px;
+  top: -102px;
   /* TODO:간격 조정 방식 바꾸기 */
   display: flex;
   flex-direction: column;
@@ -440,6 +440,28 @@ nav .gnb {
   background: var(--purple-color);
 }
 
+.collaboration_section {
+  text-align: center;
+  padding-bottom: 15%;
+}
+
+.collaboration_section h1 {
+  font-size: 1.2rem;
+  padding: 0 20px;
+  margin-bottom: 4rem;
+}
+
+.company_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.company_list img {
+  width: 40%;
+  margin: 0.8rem 1rem;
+}
+
 /* Tablet CSS */
 @media all and (min-width: 768px) {
   .scroll_bar {
@@ -448,6 +470,19 @@ nav .gnb {
 
   .recent_work_desc {
     padding: 0 10px;
+  }
+
+  .company_list img {
+    width: 20%;
+  }
+
+  .collaboration_section {
+    padding-bottom: 10%;
+  }
+
+  .collaboration_section h1 {
+    font-size: 1.4rem;
+    margin: 0 25% 8%;
   }
 }
 /* PC CSS */
@@ -501,6 +536,15 @@ nav .gnb {
 
   .dribbble_button {
     margin: 4rem 0 8rem 0;
+  }
+
+  .company_list img {
+    width: 21%;
+  }
+
+  .collaboration_section h1 {
+    font-size: 2rem;
+    margin: 10% 20% 5%;
   }
 }
 
