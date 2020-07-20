@@ -25,6 +25,7 @@ body {
   /* 스크롤바 감추기 */
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+  display: flex;
 }
 /* 스크롤바 감추기 */
 
@@ -48,8 +49,18 @@ body::-webkit-scrollbar {
   max-width: 1200px;
 }
 
-.scroll_bar_wrapper {
+/* .scroll_bar_wrapper {
   position: fixed;
+  top: 0;
+  right: 0;
+  border-left: 1px solid rgba(203, 203, 218, 0.38);
+  background: var(--white-color);
+  height: 100%;
+  width: 8px;
+  z-index: 100;
+} */
+.scroll_bar_wrapper {
+  position: relative;
   top: 0;
   right: 0;
   border-left: 1px solid rgba(203, 203, 218, 0.38);
@@ -60,11 +71,12 @@ body::-webkit-scrollbar {
 }
 
 .scroll_bar {
-  width: 100%;
+  position: fixed;
+  width: 2.5%;
   /* height: 5%; */
   height: 27px;
   background: var(--black-color);
-  position: relative;
+  /* position: relative; */
   top: 0;
   right: 0;
   z-index: 110;
