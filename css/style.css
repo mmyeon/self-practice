@@ -49,16 +49,6 @@ body::-webkit-scrollbar {
   max-width: 1200px;
 }
 
-/* .scroll_bar_wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  border-left: 1px solid rgba(203, 203, 218, 0.38);
-  background: var(--white-color);
-  height: 100%;
-  width: 8px;
-  z-index: 100;
-} */
 .scroll_bar_wrapper {
   position: relative;
   top: 0;
@@ -243,7 +233,7 @@ nav .gnb {
   width: 100%;
   background: var(--purple-color);
   color: var(--white-color);
-  padding: 50px 10px 300px 10px;
+  padding: 50px 10px 220px 10px;
   line-height: 30px;
   display: flex;
   flex-direction: column;
@@ -261,10 +251,10 @@ nav .gnb {
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 16px;
 }
-.jobs_description {
-  width: 87%;
+/* .jobs_description {
+  width: 86%;
   position: absolute;
   top: 66%;
   background: white;
@@ -273,17 +263,130 @@ nav .gnb {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(203, 203, 218, 0.38);
-}
+  line-height: 25px;
+  /* TODO:하단에 그림자 넣기 */
+/* } */
 
+.jobs_description {
+  width: 86%;
+  /* position: absolute; */
+  position: relative;
+  z-index: 20;
+  top: -181px;
+  background: white;
+  border-radius: 13px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(203, 203, 218, 0.38);
+  line-height: 25px;
+  /* TODO:하단에 그림자 넣기 */
+}
 .jobs_description section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.job_icon {
+  margin: 10px 0;
+}
+
+.job_name {
+  font-size: 1.5rem;
+  margin: 37px 0;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.about_job {
+  font-size: 1.1rem;
+  line-height: 26px;
+  /* margin-bottom: 40px; */
+  font-weight: 300;
+}
+
+.detail_title {
+  font-size: 1.1rem;
+  color: var(--purple-color);
+  font-weight: 400;
+  margin-top: 43px;
+  margin-bottom: 7px;
+}
+
+.detail_list {
+  font-size: 1.1rem;
+}
+
+.detail_list > li {
+  margin: 5px;
+}
+
+.developer_section {
+  border-top: 1px solid rgba(203, 203, 218, 0.38);
   border-bottom: 1px solid rgba(203, 203, 218, 0.38);
 }
 
-.job_description section:last-child {
-  border: 0px;
+.recent_work_section {
+  position: relative;
+  width: 100%;
+  top: -120px;
+  /* TODO:간격 조정 방식 바꾸기 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
+}
+
+.recent_work_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+}
+.recent_work_list > li img {
+  width: 97%;
+  height: 90%;
+  margin-bottom: 31px;
+  border-radius: 15px;
+}
+
+.recent_work_title {
+  font-size: 1.4rem;
+  margin: 30px;
+}
+
+.recent_work_desc {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.8rem;
+  margin-bottom: 2.9rem;
+}
+
+.email_me {
+  color: var(--purple-color);
+  font-weight: 400;
+}
+
+.dribbble_button {
+  font-size: 1.2rem;
+  color: var(--purple-color);
+  font-weight: 400;
+  border: 2px solid var(--purple-color);
+  border-radius: 40px;
+  padding: 1rem 3rem;
+  letter-spacing: 0.5px;
+  margin: 4.5rem 0;
+  cursor: pointer;
+}
+
+.dribbble_button:hover {
+  color: var(--white-color);
+  background: var(--purple-color);
 }
 
 /* Tablet CSS */
@@ -300,6 +403,35 @@ nav .gnb {
 
   .scroll_bar {
     height: 12%;
+  }
+
+  .jobs_description {
+    flex-direction: row;
+  }
+
+  .developer_section {
+    border-left: 1px solid rgba(203, 203, 218, 0.38);
+    border-right: 1px solid rgba(203, 203, 218, 0.38);
+    border-bottom: 0;
+    border-top: 0;
+  }
+  /* .recent_work_section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .recent_work_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .recent_work_list > li img {
+    width: 363px;
+    height: 242px;
   }
 }
 
