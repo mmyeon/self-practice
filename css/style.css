@@ -462,6 +462,79 @@ nav .gnb {
   margin: 0.8rem 1rem;
 }
 
+.project_section {
+  width: 100%;
+  background: var(--purple-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project_text_container {
+  padding: 5rem 1.8rem 11rem;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.startup_projects {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.project_list {
+  background: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.project_list > li {
+  position: relative;
+  top: -123px;
+  z-index: 20;
+  background: white;
+  border-radius: 10px;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  border: 1px solid rgba(203, 203, 218, 0.38);
+  margin-bottom: 2rem;
+}
+
+.project_list > li > .address {
+  color: var(--purple-color);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.project_list > li > .inactiveLink {
+  color: #af8ce7;
+}
+
+.project_logo {
+  width: 60%;
+}
+
+.project_detail {
+  padding: 2rem 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+}
+
+/* TODO: 로그 사이즈 조정하기 */
+.kybercore {
+  width: 87%;
+}
+
+.basin {
+  width: 43%;
+}
+
 /* Tablet CSS */
 @media all and (min-width: 768px) {
   .scroll_bar {
@@ -483,6 +556,23 @@ nav .gnb {
   .collaboration_section h1 {
     font-size: 1.4rem;
     margin: 0 25% 8%;
+  }
+
+  .startup_projects {
+    font-size: 2rem;
+  }
+
+  .projects_desc {
+    padding: 0 10rem;
+  }
+
+  .project_list > li {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .project_list {
+    justify-content: space-evenly;
   }
 }
 /* PC CSS */
@@ -545,6 +635,20 @@ nav .gnb {
   .collaboration_section h1 {
     font-size: 2rem;
     margin: 10% 20% 5%;
+  }
+
+  .project_desc {
+    padding: 0 16rem;
+  }
+
+  .project_text_container {
+    padding: 9rem 1.8rem 13rem;
+  }
+
+  .project_list > li {
+    width: 31%;
+    margin: 0 0.5rem 2rem 0.5rem;
+    top: -135px;
   }
 }
 
