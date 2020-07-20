@@ -351,6 +351,7 @@ nav .gnb {
 
 .recent_work_list li {
   position: relative;
+  cursor: pointer;
 }
 .recent_work_list > li img {
   width: 97%;
@@ -360,7 +361,7 @@ nav .gnb {
 }
 
 .recent_work_title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 30px;
 }
 
@@ -386,6 +387,7 @@ nav .gnb {
   letter-spacing: 0.5px;
   margin: 4.5rem 0;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 .recent_work_list .overlay {
@@ -400,21 +402,37 @@ nav .gnb {
   opacity: 0;
   border-radius: 15px;
   display: flex;
+  transition: 0.3s;
 }
 
+/* TODO: hover하면 overlay가 더 크게 보임. */
 .overlay_text_container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
+  font-weight: 350;
+  font-size: 1.2rem;
+  padding: 10% 20%;
+  line-height: 1.4rem;
 }
 
-.overlay_text_container > p {
+.overlay_text_container > span {
   color: white;
 }
 
-.recent_work_list:hover .overlay {
+.recent_work_list li:hover .overlay {
   opacity: 1;
+}
+
+.visit_website {
+  border: 2px solid var(--purple-color);
+  padding: 10px 0;
+  border-radius: 50px;
+  margin-top: 12%;
+}
+.visit_website:hover {
+  color: white;
+  background: var(--purple-color);
 }
 
 .dribbble_button:hover {
@@ -427,11 +445,15 @@ nav .gnb {
   .scroll_bar {
     height: 12%;
   }
+
+  .recent_work_desc {
+    padding: 0 10px;
+  }
 }
 /* PC CSS */
 @media all and (min-width: 960px) {
   #wrap {
-    width: 90%;
+    width: 100%;
   }
 
   .scroll_bar {
@@ -448,16 +470,22 @@ nav .gnb {
     border-bottom: 0;
     border-top: 0;
   }
-  /* .recent_work_section {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
+
+  .recent_work_section {
+    padding: 0;
+    top: -40px;
+  }
+
+  .recent_work_title {
+    font-size: 2rem;
+  }
+
+  .recent_work_desc {
+    margin-bottom: 6rem;
+  }
 
   .recent_work_list {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -465,6 +493,14 @@ nav .gnb {
   .recent_work_list > li img {
     width: 363px;
     height: 242px;
+  }
+
+  .recent_work_list li {
+    margin: 0 15px;
+  }
+
+  .dribbble_button {
+    margin: 4rem 0 8rem 0;
   }
 }
 
