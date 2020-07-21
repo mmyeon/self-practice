@@ -577,6 +577,76 @@ nav .gnb {
   background: var(--purple-color);
 }
 
+.testimonials_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.testimonials_title {
+  font-size: 1.5rem;
+  margin: 1.8rem;
+  font-weight: 800;
+}
+
+.testimonials_detail > img {
+  width: 6.6rem;
+  margin: 3rem 0 2.5rem 0;
+}
+
+.image_round {
+  border-radius: 50%;
+}
+
+.people_say {
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  font-weight: 340;
+}
+
+.good_comment {
+  font-size: 1.3rem;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 350;
+}
+
+.about_person {
+  display: flex;
+  flex-direction: column;
+}
+
+.who_says {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.where_work {
+  font-size: 1.15rem;
+}
+
+.circle_button {
+  display: flex;
+  padding: 10px;
+  margin: 2rem 0 4rem 0;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(203, 203, 218, 0.38);
+  margin: 0 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.circle_first {
+  background: var(--purple-color);
+}
+
 /* Tablet CSS */
 @media all and (min-width: 768px) {
   .scroll_bar {
@@ -628,6 +698,10 @@ nav .gnb {
 
   .talk_button {
     margin: 3rem 0 9rem 0;
+  }
+
+  .good_comment {
+    padding: 0 12rem;
   }
 }
 /* PC CSS */
@@ -704,6 +778,10 @@ nav .gnb {
     width: 31%;
     margin: 0 0.5rem 2rem 0.5rem;
     top: -135px;
+  }
+
+  .good_comment {
+    padding: 0 13rem;
   }
 }
 
