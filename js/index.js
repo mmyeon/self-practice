@@ -24,3 +24,45 @@ document.addEventListener("scroll", function () {
   // console.log("maxScrollValue", maxScrollValue);
   // console.log("scrollPer", scrollPer);
 });
+
+const firstSlide = document.querySelector(".testimonials_detail:first-child");
+const SHOWING_CLASS = "showing";
+
+function slide() {
+  const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+
+  // currentSlide가 없으면 처음요소를 보여주는 코드
+  if (currentSlide) {
+    currentSlide.classList.remove(SHOWING_CLASS);
+    const nextSlide = currentSlide.nextElementSibling;
+    if (nextSlide) {
+      nextSlide.classList.add(SHOWING_CLASS);
+    } else {
+      firstSlide.classList.add(SHOWING_CLASS);
+    }
+  } else {
+    firstSlide.classList.add(SHOWING_CLASS);
+  }
+}
+
+const circles = document.querySelectorAll(".circle");
+const slide_items = document.querySelectorAll(".testimonials_detail");
+
+console.log(slide_items);
+circles[0].addEventListener("click", function slideFirst() {
+  circles[0].classList.add("clicked");
+  slide_items[0].classList.add("showing");
+  slide_items[1].classList.remove("showing");
+  circles[1].classList.remove("clicked");
+});
+
+circles[1].addEventListener("click", function slideFirst() {
+  circles[1].classList.add("clicked");
+  slide_items[1].classList.add("showing");
+  slide_items[0].classList.remove("showing");
+  circles[0].classList.remove("clicked");
+});
+
+circles.forEach((circle) =>
+  circle.addEventListener("click", console.log("wow"))
+);

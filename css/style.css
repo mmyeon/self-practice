@@ -584,6 +584,14 @@ nav .gnb {
   justify-content: center;
   text-align: center;
   line-height: 2rem;
+  position: relative;
+}
+
+.testimonials_slide {
+  /* TODO: 여기서 이 코드가 왜 글자를 길게 만드는지 확인하기  */
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
 }
 
 .testimonials_title {
@@ -592,9 +600,20 @@ nav .gnb {
   font-weight: 800;
 }
 
+.testimonials_detail {
+  background: var(--white-color);
+  position: absolute;
+  top: 4rem;
+  z-index: 0;
+}
+
 .testimonials_detail > img {
   width: 6.6rem;
   margin: 3rem 0 2.5rem 0;
+}
+
+.showing {
+  z-index: 1;
 }
 
 .image_round {
@@ -630,6 +649,7 @@ nav .gnb {
 
 .circle_button {
   display: flex;
+  justify-content: center;
   padding: 10px;
   margin: 2rem 0 4rem 0;
 }
@@ -640,12 +660,17 @@ nav .gnb {
   border-radius: 50%;
   border: 2px solid rgba(203, 203, 218, 0.38);
   margin: 0 0.5rem;
-  margin-bottom: 3.5rem;
+  /* margin-bottom: 3.5rem; */
+  transition: background 0.6s ease-in;
 }
 
-.circle_first {
+.clicked {
   background: var(--purple-color);
 }
+
+/* .circle_first {
+  background: var(--purple-color);
+} */
 
 .start_section {
   width: 90%;
