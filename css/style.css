@@ -647,6 +647,55 @@ nav .gnb {
   background: var(--purple-color);
 }
 
+.start_section {
+  width: 90%;
+  background: black;
+  color: var(--white-color);
+  text-align: center;
+  margin: 0 auto;
+  z-index: 20;
+  padding: 4.5rem 2rem;
+  border-radius: 15px;
+  line-height: 1.4rem;
+  position: relative;
+  top: -52px;
+}
+
+.start_project_title {
+  font-size: 2rem;
+}
+
+.start_project_detail {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+
+.do_this_button {
+  font-size: 1.3rem;
+  font-weight: 400;
+  border: 2px solid var(--purple-color);
+  border-radius: 40px;
+  padding: 0.8rem 3rem;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.do_this_button:hover {
+  background: var(--purple-color);
+}
+
+footer {
+  width: 100%;
+  background: var(--purple-color);
+  padding: 5rem;
+  position: relative;
+  top: -200px;
+}
+
+.sns_button > li > a {
+  color: var(--white-color);
+}
+
 /* Tablet CSS */
 @media all and (min-width: 768px) {
   .scroll_bar {
@@ -702,6 +751,10 @@ nav .gnb {
 
   .good_comment {
     padding: 0 12rem;
+  }
+
+  .start_section {
+    width: 94%;
   }
 }
 /* PC CSS */
@@ -782,6 +835,18 @@ nav .gnb {
 
   .good_comment {
     padding: 0 13rem;
+  }
+
+  .start_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+
+  .start_project_detail {
+    margin: 0 9rem;
+    width: 31%;
   }
 }
 
