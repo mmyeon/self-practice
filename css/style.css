@@ -3,6 +3,7 @@
   --white-color: #ffffff;
   --purple-color: #7510f7;
   --black-color: #141c3a;
+  --gray-color: #ffffff4d;
   /* size */
   --logo-size: 20px;
   /* font size */
@@ -53,7 +54,7 @@ body::-webkit-scrollbar {
   position: relative;
   top: 0;
   right: 0;
-  border-left: 1px solid rgba(203, 203, 218, 0.38);
+  border-left: 1px solid var(--gray-color);
   background: var(--white-color);
   height: 100%;
   width: 8px;
@@ -138,7 +139,7 @@ nav .gnb {
   padding-bottom: 35px;
   margin: 0 auto;
   box-shadow: 0px 12px 22px -20px #cbcbda;
-  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
+  border-bottom: 1px solid var(--gray-color);
 }
 
 .gnb li {
@@ -278,7 +279,7 @@ nav .gnb {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(203, 203, 218, 0.38);
+  border: 1px solid var(--gray-color);
   line-height: 25px;
   /* TODO:하단에 그림자 넣기 */
 }
@@ -325,8 +326,8 @@ nav .gnb {
 }
 
 .developer_section {
-  border-top: 1px solid rgba(203, 203, 218, 0.38);
-  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
 }
 
 .recent_work_section {
@@ -339,7 +340,7 @@ nav .gnb {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
+  border-bottom: 1px solid var(--gray-color);
 }
 
 .recent_work_list {
@@ -502,7 +503,7 @@ nav .gnb {
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
-  border: 1px solid rgba(203, 203, 218, 0.38);
+  border: 1px solid var(--gray-color);
   margin-bottom: 2rem;
 }
 
@@ -542,7 +543,7 @@ nav .gnb {
 
 .marketing_section {
   text-align: center;
-  border-bottom: 1px solid rgba(203, 203, 218, 0.38);
+  border-bottom: 1px solid var(--gray-color);
   font-size: 1.2rem;
   line-height: 1.9rem;
   position: relative;
@@ -603,7 +604,6 @@ nav .gnb {
 .testimonials_detail {
   background: var(--white-color);
   position: absolute;
-  top: 4rem;
   z-index: 0;
 }
 
@@ -658,7 +658,7 @@ nav .gnb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid rgba(203, 203, 218, 0.38);
+  border: 2px solid var(--gray-color);
   margin: 0 0.5rem;
   /* margin-bottom: 3.5rem; */
   transition: background 0.6s ease-in;
@@ -673,17 +673,16 @@ nav .gnb {
 } */
 
 .start_section {
-  width: 90%;
+  width: 89%;
   background: black;
   color: var(--white-color);
   text-align: center;
-  margin: 0 auto;
   z-index: 20;
-  padding: 4.5rem 2rem;
+  padding: 4.5rem 1rem;
   border-radius: 15px;
   line-height: 1.4rem;
-  position: relative;
-  top: -52px;
+  position: absolute;
+  top: -71px;
 }
 
 .start_project_title {
@@ -691,8 +690,8 @@ nav .gnb {
 }
 
 .start_project_detail {
-  margin: 2rem 0;
   font-size: 1.1rem;
+  margin: 2rem 1rem;
 }
 
 .do_this_button {
@@ -700,9 +699,10 @@ nav .gnb {
   font-weight: 400;
   border: 2px solid var(--purple-color);
   border-radius: 40px;
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 2rem;
   display: inline-block;
   transition: 0.4s;
+  margin-top: 0.5rem;
 }
 
 .do_this_button:hover {
@@ -712,13 +712,61 @@ nav .gnb {
 footer {
   width: 100%;
   background: var(--purple-color);
-  padding: 5rem;
   position: relative;
-  top: -200px;
+  top: 40rem;
+  padding: 13.5rem 1rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.sns_button > li > a {
-  color: var(--white-color);
+/* TODO:a태그나 img태그에 margin-top하는 차이 */
+footer > a {
+  margin-top: 8rem;
+}
+
+.sentence {
+  color: white;
+  opacity: 0.8;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 3rem 1rem 0;
+}
+
+.sns_button {
+  display: flex;
+  font-size: 1.1rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.sns_button > li {
+  border: 2px solid var(--gray-color);
+  border-radius: 50px;
+  padding: 0.7rem;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.sns_button > li:hover {
+  background: var(--white-color);
+}
+
+.website_infomation {
+  color: white;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.website_infomation > .copyright {
+  letter-spacing: 1px;
+}
+
+.website_infomation > img {
+  width: 10rem;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 /* Tablet CSS */
@@ -780,8 +828,35 @@ footer {
 
   .start_section {
     width: 94%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .start_project_detail {
+    width: 30%;
+  }
+
+  .sentence {
+    display: block;
+    margin-top: 3rem;
+    width: 15rem;
+  }
+
+  .sns_button > li {
+    margin: 0.3rem 0.8rem;
+  }
+
+  .footer {
+    padding: 5.5rem 1rem 3.5rem;
+  }
+
+  .footer > a {
+    margin-top: 7rem;
   }
 }
+
 /* PC CSS */
 @media all and (min-width: 960px) {
   #wrap {
@@ -797,8 +872,8 @@ footer {
   }
 
   .developer_section {
-    border-left: 1px solid rgba(203, 203, 218, 0.38);
-    border-right: 1px solid rgba(203, 203, 218, 0.38);
+    border-left: 1px solid var(--gray-color);
+    border-right: 1px solid var(--gray-color);
     border-bottom: 0;
     border-top: 0;
   }
@@ -861,18 +936,4 @@ footer {
   .good_comment {
     padding: 0 13rem;
   }
-
-  .start_section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 3rem;
-  }
-
-  .start_project_detail {
-    margin: 0 9rem;
-    width: 31%;
-  }
 }
-
-/* TODO: 미디어쿼리 스타일마다 적용해서 가독성 좋게 만들기.  */
