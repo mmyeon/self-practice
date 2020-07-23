@@ -63,6 +63,11 @@ circles[1].addEventListener("click", function slideFirst() {
   circles[0].classList.remove("clicked");
 });
 
+this.classList.toggle("class");
+
+// TODO:왜 리로딩 하면 클릭하지 않아도 wow가 두번 찍힐까
 circles.forEach((circle) =>
   circle.addEventListener("click", console.log("wow"))
 );
+
+// 개선
